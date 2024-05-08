@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+div.mainbox{
+    background-image: url(./img1.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+div.mainbox div.button1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    position: absolute;
+    left: 16px;
+    line-height: 60px;
+   
+}
+
+div.mainbox  div.sidebarmenu{
+    position: fixed;
+    left: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(255,255,255,0.2);
+    box-shadow: 0 0 7px rgb(255, 255,255 , 0.5);
+    transition: all 0.5s linear;
+}
+div.mainbox  div.sidebarmenu div.logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 0 4px rgb(255, 255,255 , 0.5);
+    height: 60px;
+}
+div.mainbox  div.sidebarmenu div.logo a{
+    text-decoration: none;
+    position: absolute;
+    left: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+div.mainbox  div.sidebarmenu div.buttontwo i{
+    color:gray;
+    position: absolute;
+    left: 275px;
+    font-size: 25px;
+    line-height: 60px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s linear;
+
+}
+
+div.mainbox  div.sidebarmenu div.menu{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+div.mainbox  div.sidebarmenu div.menu li {
+    margin-top: 6px;
+    padding: 14px 20px;
+
+}
+div.mainbox  div.sidebarmenu div.menu li i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+div.mainbox  div.sidebarmenu div.menu li i{
+    padding-right: 8px;
+}
+
+#check{
+    display: none;
+}
+
+div.mainbox  div.sidebarmenu div.menu li:hover{
+    box-shadow: 0 0 7px rgb(255, 255,255 , 0.5);
+
+}
+div.button1 i:hover{
+    font-size: 40px;
+}
+div.buttontwo i:hover{
+    font-size: 200px;
+}
+
+#check:checked ~ .sidebarmenu{ 
+    left: 0;
+}
+#check:checked ~ .button1 i{
+    opacity: 0;
+
+}
+#check:checked ~ .sidebarmenu .buttontwo i{
+    opacity: 1;
+}
